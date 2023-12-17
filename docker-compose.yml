@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  goapp:
+    build: "."
+    ports:
+      - 8081:8081
+    environment:
+      - CONFIG_PATH=./config/local.yml
+    volumes:
+      - ./storage:/app/storage
